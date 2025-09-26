@@ -1,14 +1,22 @@
 .container {
     display: flex;
+    width: 960px;
 }
 
 .square {
+    flex: 1;
+    height: 60px;
     background: grey;
-    width: 100px;
-    height: 100px;
     border: 2px solid black;
 }
 
 * {
     box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
