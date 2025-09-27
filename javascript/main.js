@@ -39,13 +39,11 @@ function createGrid(n) {
 
 // prompts user for input to generate new sized grid
 function newGridSizePrompt() {
-    let input = null
-    while (true) {
-        input = parseInt(prompt("Enter New Grid Size (1-100): "))
-        if (input >= 1 && input <= 100) break;
+    let input = parseInt(prompt("Enter New Grid Size (1-100): "))
+    if (input >= 1 && input <= 100) {
+        document.body.textContent = ""
+        buildPage(input)
     }
-    document.body.textContent = ""
-    buildPage(input)
 }
 
 // creates gridReset class button with click event listener
