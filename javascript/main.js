@@ -37,9 +37,15 @@ function createGrid(n) {
     document.body.append(...containerList)
 }
 
-// displays popup to receive new grid size via user input
+// prompts user for input to generate new sized grid
 function newGridSizePrompt() {
-    let input = prompt("Enter New Grid Size (Max: 100): ")
+    let input = null
+    while (true) {
+        input = parseInt(prompt("Enter New Grid Size (1-100): "))
+        if (input >= 1 && input <= 100) break;
+    }
+    document.body.textContent = ""
+    buildPage(input)
 }
 
 // creates gridReset class button with click event listener
@@ -51,10 +57,12 @@ function createGridResetButton() {
     document.body.append(button)
 }
 
+// applies reset button & N-size grid layout to page
+function buildPage(n) {
+    createGridResetButton()
+    createGrid(n)
+}
 
 
-// create grid reset button
-createGridResetButton()
-
-// create main default size grid
-createGrid(16)
+// build default 16x16 page
+buildPage(16)

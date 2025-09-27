@@ -1,9 +1,10 @@
 .gridReset {
-    width: 130px;
+    width: 200px;
     font-weight: bold;
+    font-size: x-large;
     border-radius: 10px;
-    padding-block: 10px;
-    margin-block-end: 10px;
+    padding-block: 20px;
+    margin-block: 50px;
 }
 
 .container {
